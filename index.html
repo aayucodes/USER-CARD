@@ -1,0 +1,86 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reusable User Card Component</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body ng-controller="MainController">
+    <h2>AngularJS Reusable Component (User Card)</h2>
+
+    <div class="container">
+      <!-- Same component reused multiple times -->
+
+      <user-card name="aayu" age="22" city="Delhi" role="Frontend Developer">
+      </user-card>
+
+      <user-card name="satyam" age="21" city="Mumbai" role="Backend Developer">
+      </user-card>
+
+      <user-card name="kittu" age="23" city="Pune" role="Full Stack Developer">
+      </user-card>
+
+      <user-card name="krati" age="24" city="kota" role="MERN Developer">
+      </user-card>
+    </div>
+
+    <script>
+      var app = angular.module("myApp", []);
+
+      app.controller("MainController", function ($scope) {});
+
+      app.directive("userCard", function () {
+        return {
+          restrict: "E",
+
+          scope: {
+            name: "@",
+
+            age: "@",
+
+            city: "@",
+
+            role: "@",
+          },
+
+          template: `
+
+        <div class="card">
+
+            <h3>{{name}}</h3>
+
+            <p><b>Age :</b> {{age}}</p>
+
+            <p><b>City :</b> {{city}}</p>
+
+            <p><b>Role :</b> {{role}}</p>
+
+            <button ng-click="showMessage()">
+                View Profile
+            </button>
+
+        </div>
+        `,
+
+          link: function (scope) {
+            scope.showMessage = function () {
+              alert(
+                "Name : " +
+                  scope.name +
+                  "\nAge : " +
+                  scope.age +
+                  "\nCity : " +
+                  scope.city +
+                  "\nRole : " +
+                  scope.role,
+              );
+            };
+          },
+        };
+      });
+    </script>
+  </body>
+</html>

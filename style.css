@@ -1,0 +1,106 @@
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    margin: 40px; 
+    background: #32446e; 
+    color: #ffffff;
+} 
+h2 { 
+    text-align: center; 
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+} 
+
+.container { 
+    display: flex; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+    justify-content: center;
+} 
+
+.card { 
+    width: 240px; 
+    border: none;
+    border-radius: 10px; 
+    padding: 15px; 
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+} 
+.container .card:nth-child(1) {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6); 
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4); 
+}
+.container .card:nth-child(1) h3 { color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.container .card:nth-child(1) p { color: #bfdbfe; } 
+.container .card:nth-child(1) button { background: #ffffff; color: #1e3a8a; }
+
+
+.container .card:nth-child(2) {
+    background: linear-gradient(135deg, #4c1d95, #8b5cf6);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+}
+.container .card:nth-child(2) h3 { color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.container .card:nth-child(2) p { color: #ddd6fe; } 
+.container .card:nth-child(2) button { background: #ffffff; color: #4c1d95; }
+
+
+.container .card:nth-child(3) {
+    background: linear-gradient(135deg, #064e3b, #10b981); 
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+}
+.container .card:nth-child(3) h3 { color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); } 
+.container .card:nth-child(3) p { color: #a7f3d0; } 
+.container .card:nth-child(3) button { background: #ffffff; color: #064e3b; }
+
+
+.container .card:nth-child(4) {
+    background: linear-gradient(135deg, #7c2d12, #f97316); 
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4); 
+}
+.container .card:nth-child(4) h3 { color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.container .card:nth-child(4) p { color: #ffedd5; }
+.container .card:nth-child(4) button { background: #ffffff; color: #7c2d12; }
+
+
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.card h3 { 
+    margin: 0 0 15px 0; 
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: capitalize;
+} 
+
+.card p { 
+    margin: 20px 0; 
+    font-size: 0.95rem;
+    font-weight: 400;
+} 
+
+.card button { 
+    width: 100%; 
+    margin-top: 15px;
+    padding: 12px 15px; 
+    border: none; 
+    border-radius: 10px; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+} 
+
+.card button:hover { 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card button:active {
+    transform: translateY(0);
+}
+
